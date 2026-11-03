@@ -234,7 +234,52 @@ La solución permitió:
 - Responder preguntas utilizando documentación institucional.
 
 ---
+# IA Responsable Aplicada al Caso
 
+La solución Rinosoft AI Advisor fue diseñada considerando los principios de IA Responsable promovidos por Microsoft y aplicados directamente al caso de uso desarrollado.
+
+| Principio | Aplicación en Rinosoft AI Advisor |
+|------------|------------|
+| Equidad | El asistente proporciona respuestas utilizando la misma base documental para todos los usuarios. Las respuestas se generan a partir de la documentación corporativa disponible y no dependen del perfil del usuario. |
+| Confiabilidad y seguridad | La información es recuperada desde una base documental controlada mediante RAG. Cuando no existe información suficiente en la documentación, el agente informa esta situación y evita inventar procedimientos o datos corporativos. |
+| Privacidad y seguridad | El acceso a la aplicación se encuentra protegido mediante autenticación. La solución utiliza Azure App Service, Microsoft Foundry, Managed Identity y controles RBAC para proteger la comunicación con los servicios de IA. |
+| Inclusión | La aplicación fue desarrollada con una interfaz web sencilla y accesible desde navegador, facilitando su utilización por personal de distintas áreas de la organización sin necesidad de conocimientos técnicos especializados. |
+| Transparencia | El agente puede indicar la fuente documental utilizada para responder una consulta, permitiendo al usuario conocer el origen de la información proporcionada. |
+| Rendición de cuentas | Las respuestas no sustituyen la validación humana. Los usuarios son responsables de verificar la información antes de tomar decisiones operativas o de negocio basadas en las recomendaciones del asistente. |
+
+## Ejemplos Aplicados
+
+### Transparencia
+
+Pregunta:
+
+> ¿Cuál es la misión de Rinosoft?
+
+Respuesta:
+
+> La misión de Rinosoft es ayudar a organizaciones públicas y privadas a acelerar su transformación digital mediante tecnología, nube e inteligencia artificial.
+
+Fuente:
+
+> MisionVision_Rinosoft.docx
+
+---
+
+### Confiabilidad
+
+Si un usuario realiza una consulta sobre un procedimiento que no existe en la documentación corporativa, el asistente indica que no encontró información específica y evita generar información ficticia.
+
+---
+
+### Seguridad
+
+La integración entre Azure App Service y Microsoft Foundry se realizó utilizando Managed Identity y RBAC, eliminando la necesidad de almacenar credenciales de acceso directamente en el código fuente de la aplicación.
+
+---
+
+### Rendición de cuentas
+
+Rinosoft AI Advisor funciona como una herramienta de apoyo para consulta documental. La responsabilidad final sobre decisiones administrativas, financieras o técnicas continúa siendo de los usuarios y áreas responsables de la organización.
 # Conclusiones
 
 El proyecto permitió aplicar de manera práctica los conceptos estudiados durante el curso AI-901.
